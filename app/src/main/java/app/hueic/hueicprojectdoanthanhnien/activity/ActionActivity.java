@@ -1,9 +1,11 @@
 package app.hueic.hueicprojectdoanthanhnien.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TabHost;
 
 import java.util.ArrayList;
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 import app.hueic.hueicprojectdoanthanhnien.R;
 import app.hueic.hueicprojectdoanthanhnien.adapter.ActionAdapter;
 import app.hueic.hueicprojectdoanthanhnien.model.Action;
+import app.hueic.hueicprojectdoanthanhnien.recycle.ClickListener;
+import app.hueic.hueicprojectdoanthanhnien.recycle.RecyclerTouchListener;
 
 public class ActionActivity extends AppCompatActivity {
     //Khai bao ListView
@@ -49,6 +53,29 @@ public class ActionActivity extends AppCompatActivity {
                 }
             }
         });
+        rec_unacted.addOnItemTouchListener(new RecyclerTouchListener(this, rec_unacted, new ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                Intent intent = new Intent(ActionActivity.this, ScannerActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+        rec_filled.addOnItemTouchListener(new RecyclerTouchListener(this, rec_filled, new ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
     }
 
     private void addControls() {
