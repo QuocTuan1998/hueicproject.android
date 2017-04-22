@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HueIC Project Doan Thanh Nien</string>
+    <string name="user_name">Tài khoản:</string>
+    <string name="pass_word">Mật khẩu:</string>
+    <string name="hint_user_name">nhập tài khoản</string>
+    <string name="hint_pass_word">nhập mật khẩu</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="save_infor">Ghi nhớ đăng nhập</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="password_again">Nhập lại mật khẩu</string>
+    <string name="hint_pass_word_again">nhập lại mật khẩu</string>
+    <string name="registry">Đăng ký</string>
+    <string name="finish">Kết thúc</string>
+    <string name="title_registry">Đăng ký</string>
+    <string name="hoatdong_item">Hoạt động n</string>
+</resources>
