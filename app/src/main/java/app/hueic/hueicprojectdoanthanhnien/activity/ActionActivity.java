@@ -68,7 +68,8 @@ public class ActionActivity extends AppCompatActivity {
         rec_filled.addOnItemTouchListener(new RecyclerTouchListener(this, rec_filled, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-
+            Intent intent = new Intent(ActionActivity.this, InforActivity.class);
+            startActivity(intent);
             }
 
             @Override
